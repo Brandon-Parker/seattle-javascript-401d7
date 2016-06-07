@@ -4,6 +4,8 @@ module.exports = function(app) {
     this.errors = [];
     this.getUsername = function() {
       // AUTH_EXP: What happens when this function is called?
+      //This function will grab the username that is stored or was just created. The second method will remove the token
+      //from the local storage, set the current username to an empty string, and then redirect to the signin route
       auth.getUsername()
         .then((currentUser) => {
           this.username = currentUser;

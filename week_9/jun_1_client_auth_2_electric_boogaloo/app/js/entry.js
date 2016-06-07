@@ -14,6 +14,9 @@ demoApp.config(['$routeProvider', function($rp) {
     })
     // AUTH_EXP: how do the signin/up routes differ and what is their relationship
     // with one another
+    //The big differences between the two routes is which controller is being called and rendered.
+    //They are both using the same view however the based off of the route, the ternary will determine
+    //what is rendered.
     .when('/signup', {
       templateUrl: 'templates/auth/views/auth_view.html',
       controller: 'SignUpController',
